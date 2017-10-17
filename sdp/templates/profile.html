@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+{% block additional_styles %}
+<style>
+body {
+{#    file:///home/fnoboni/Desktop/profile2.jpg#}
+	background-image: url("https://imgur.com/B9YnYck.jpg");
+	background-repeat: no-repeat;
+    background-size: contain;
+    background-size: 100%;
+    background-attachment: fixed;
+
+}
+</style>
+{% endblock %}
+<title>{% block title %}Profile{% endblock %}</title>
+</head>
+	<div class="container">
+        <img source="{{ student.profile_pic.url }}" width="210">  </img>
+        <p>{{student.name}}</p>
+        <label >Batch: {{student.batch}}</label>
+        <br>
+
+        <label >Email: {{student.mail_id}} </label>
+
+        <form method="get" action="http://127.0.0.1:8000/Login/{{ student.id }}">
+        <button type="submit" class="btn btn-success"><b>Edit Profile</b></button>
+        </form>
+    </div>
+
+
+<style>
+input {
+    background-color: white;
+    color: black;
+    padding:14px 20px;
+    margin: 8px 0;
+    cursor: pointer;
+    width: 100%;
+}
+button{
+    background-color: #00008B;
+    color:white;
+    position:absolute;
+    left:1000px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 8px 0;
+    cursor: pointer;
+    width:10%;
+
+
+}
+.container {
+    font-size: 20px;
+
+    font-weight: bold;
+    padding-left:950px;
+	padding-top: 320px;
+}
+</style>
+</body>
+</html>
+
+
